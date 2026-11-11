@@ -1,0 +1,16 @@
+{
+  "name": "sustainability-lab",
+  "owner": {
+    "name": "Sustainability Lab, IIT Gandhinagar"
+  },
+  "metadata": {
+    "description": "Agent skills from the Sustainability Lab, IIT Gandhinagar."
+  },
+  "plugins": [
+    {
+      "name": "paper-writing",
+      "source": "./",
+      "description": "Write and review research papers in the Sustainability Lab style."
+    }
+  ]
+}
