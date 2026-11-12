@@ -5,7 +5,7 @@ description: Write, rewrite or review a research paper (LaTeX or Markdown) in th
 
 # Paper writing (Sustainability Lab style)
 
-Human-readable version with figures: https://sustainability-lab.github.io/handbook/writing-papers.html
+Human-readable version with figures: https://sustainability-lab.github.io/handbook/writing-papers.html (hero figures: https://sustainability-lab.github.io/handbook/hero-figures.html)
 
 Files in this skill:
 - `reference.md`: every rule, section by section, with examples. Read the part for the section you are working on.
@@ -29,7 +29,7 @@ Files in this skill:
 - **Evaluation.** Open with numbered questions tied to the goals. Setup: scenario, one data-set table, baselines grouped with reasons and given their best chance, metrics by goal, protocol. A new metric is a subsection here. Results subsections are questions answered in their first sentence. One headline figure. Oracles, intervals, rule of three for zero events, failure cases.
 - **Analysis, limitations, conclusion.** "Why does it work?" questions. Limitations as a numbered list, each with an italic verdict, evidence and a way forward. A 4–6-sentence conclusion.
 - **Sentences.** Active voice with "we". Median 15–18 words, maximum about 25. One idea per sentence. `\emph` only on the words that carry the argument (one or two per paragraph). No filler, no inflated words, no bare numbers, one term per concept.
-- **Hero figure.** Figure 1 sits on page 1 or 2 and shows the problem, the idea and the payoff in ten seconds. It is a visual abstract, not the architecture diagram. Lead with whatever the main claim needs (problem, idea, payoff or scope). Lab default: three panels on one real example, with one number.
+- **Hero figure.** Figure 1 sits on page 1 and shows the problem, the idea and the payoff in ten seconds. It is a visual abstract, not the architecture diagram. Lead with whatever the main claim needs (problem, idea, payoff or scope). Lab default: three panels on one real example, with one number.
 - **Figures.** One message, stated in the first sentence of the caption. One semantic colour code for the whole paper (for example orange = problem, blue = ours, green = good outcome, grey = baseline). Movement shown as a colour change. Colour-blind safe (Okabe–Ito), never colour alone. Text ≥ 6–7 pt.
 - **Tables.** Takeaway-first caption. Column groups labelled by goal. No empty headline cells. Counts for small n. Stated bold rule; shaded "ours" row.
 - **LaTeX.** `\cref` for every reference, including the supplement (`xr-hyper`, `\externaldocument[S-]{supp}`). Macros for the method name and metrics. Author comment macros behind `\ifshownotes`. One sentence per source line.

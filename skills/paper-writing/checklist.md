@@ -11,7 +11,7 @@ Run every item. Report each as pass, fail (with location) or not applicable.
 - [ ] Related work opens with "We now categorize", groups by idea, and each family ends with how we relate.
 - [ ] The method gives the intuition first, follows a toy example, and contains no experiment counts.
 - [ ] The evaluation opens with questions tied to goals, then setup (scenario, data table, grouped baselines, metrics by goal, protocol), then answer-first results, with one headline figure.
-- [ ] Figure 1 sits on page 1 or 2 and shows the problem, the idea and the payoff in ten seconds.
+- [ ] Figure 1 sits on page 1 and shows the problem, the idea and the payoff in ten seconds.
 - [ ] Limitations form a numbered list with ways forward; the conclusion runs 4–6 sentences.
 
 ## Evidence
@@ -30,14 +30,15 @@ Run every item. Report each as pass, fail (with location) or not applicable.
 - [ ] One spelling variety (British or American) throughout.
 
 ## Figure 1 (hero figure)
-- [ ] **Immediate clarity.** The main claim is clear in 5 to 10 seconds.
-- [ ] **Problem framing.** The reader can see what existing approaches cannot do.
-- [ ] **Novelty.** The new contribution stands out, and is not buried in a large pipeline.
-- [ ] **Concrete examples.** Real images, outputs or cases replace decorative icons.
-- [ ] **Evidence.** A comparison, a number or a shown capability supports the claim.
-- [ ] **Visual hierarchy.** One message, three or four groups, one reading direction.
-- [ ] **Readable at paper size.** Text, arrows and labels are legible in the compiled PDF.
-- [ ] **Independence.** Labels, legend and caption let the figure stand alone.
+- [ ] The claim is clear in ten seconds.
+- [ ] The reader can see what existing methods cannot do.
+- [ ] The new part stands out, and is not buried in a pipeline.
+- [ ] Real inputs and outputs replace icons.
+- [ ] A number or a comparison supports the claim.
+- [ ] It has three or four groups and one reading direction.
+- [ ] Every label is legible in the compiled PDF, and spelt correctly.
+- [ ] The figure and its caption stand alone.
+- [ ] It is on page 1, and its words match the abstract's.
 
 ## Figures and tables
 - [ ] Each caption opens with the figure's or table's one message.

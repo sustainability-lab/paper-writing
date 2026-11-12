@@ -126,54 +126,58 @@ Example (after):
 
 ## 11. Hero figure (Figure 1)
 
-Figure 1 is the picture on page 1 or 2 that a reviewer sees before reading the introduction. Many reviewers decide how carefully to read from the title, the abstract and this figure.
-
-A reader should answer three questions in about ten seconds:
+Figure 1 is the picture on page 1 that a reviewer sees before reading the introduction. In about ten seconds it should answer three questions:
 
 1. **Problem.** What is hard or missing today?
-2. **Idea.** What is the one thing that changes the situation?
-3. **Payoff.** What becomes possible, or what improves, and by how much?
+2. **Idea.** What is the one thing that changes that?
+3. **Payoff.** What becomes possible, and by how much?
 
-It is a visual abstract, and usually *not* the architecture diagram. That diagram answers "how is it built?", which is a question for Figure 2.
+It is a visual abstract, not the architecture diagram. The first draft is nearly always the pipeline; redraw it.
 
-**What to lead with.** Ask which sentence of the abstract a reviewer should repeat to the other reviewers, and draw that sentence.
+**Choose what leads.** Ask which sentence of the abstract a reviewer should repeat to the other reviewers. Draw that sentence.
 
-| If the main claim is | Lead with |
-|---|---|
-| "We can now do X, which nobody could." | **Payoff**: the outputs themselves, on real inputs |
-| "We do X better, faster or cheaper." | **Payoff**: the evidence, with the numbers on the picture |
-| "One simple idea solves X." | **Idea**: one real example going in, the idea, the result coming out |
-| "One model handles many settings." | **Idea**: many real inputs, one model, many real outputs |
-| "Everyone has missed problem X." | **Problem**: a failure, measured or shown |
-| "Here is a dataset or a benchmark." | **Scope**: real samples, counts, and one item from start to score |
-| "We make three contributions of equal weight." | **Scope**: one panel per contribution |
+| The main claim | Lead with | Layout |
+|---|---|---|
+| "Everyone has missed problem X." | **Problem** | A plot of the failure |
+| "A small change to a known method matters." | **Idea** | Old and new, side by side |
+| "One simple idea solves X." | **Idea** | One example in, the idea, the result out |
+| "One method handles many settings." | **Idea** | Many inputs, one model, many outputs |
+| "We do X better, faster or cheaper." | **Payoff** | Methods side by side, numbers on the picture |
+| "We can now do X, which nobody could." | **Payoff** | A gallery of real outputs |
+| "Here is a dataset or a benchmark." | **Scope** | Real samples and counts, or one item from input to score |
+| "We make several contributions." | **Scope** | One panel per contribution |
 
-**Lab default for an applied paper.** A strip of three panels: problem, idea, payoff, in that order, on *one real example*, with *one number*. An applied reviewer first has to believe the problem is real, so the problem gets its own panel. Give the most space to the strongest panel: a capability paper widens the payoff; a paper with one clever idea widens the idea.
+**Lab default for an applied paper.** Three panels, problem then idea then payoff, on *one real example*, with *one number*. Give the most space to the strongest panel. Published hero figures often carry no number, because their outputs can be judged by eye. A forecast or a temperature cannot, so our figures need the number.
 
-**How to make one.**
+**Kestrel.** The pipeline draft is five boxes: phone audio, spectrogram, encoder, classifier, species. Every box is true, and none says what is hard, what is new or what is gained. The sketch we would draw instead:
 
-1. **Write the sentence first.** "Today, [problem]. We [idea]. Now, [payoff with a number]." If you cannot complete it, the paper is not ready for a figure.
-2. **Choose what leads,** from the table above. Give that panel the most space.
-3. **Pick one real example and follow it through every panel** (one home, one thermal frame, one city). Real data beats icons. Every image must come from the run it claims to show.
-4. **Sketch it on paper in week one,** with three or four groups and one reading direction. Show the sketch to a labmate before opening any drawing tool.
-5. **Add one number,** on the figure itself, with the baseline beside it.
-6. **Colour only what is new.** Grey for existing work, one accent colour for the contribution, and the same colour code as the rest of the paper.
-7. **Build it at its final width.** Draw in Figma, draw.io, Inkscape or TikZ, export a vector PDF, and check that the smallest text is at least 6–7 pt in the compiled paper. Plots inside it follow LaTeXify.
-8. **Place it at the top of page 1 or 2.** Use `figure*` for a full-width figure. The ACM template also has `teaserfigure`, which sets it under the title.
-9. **Open the caption with the message,** as for every figure.
-10. **Run the ten-second test.** Show the figure, without its caption, to someone outside the project for ten seconds. Ask for the problem, the idea and the payoff. Redraw whatever they miss.
+- *Problem.* A classifier trained on clean recordings drops from 91% to 54% on phone audio. Draw one call as two spectrograms, studio and phone.
+- *Idea.* The phone's microphone, not the bird, causes the drop. Undo the microphone first. Draw the phone spectrogram, corrected.
+- *Payoff.* 83% on phone audio, against 61% for the best baseline. Draw the plot of accuracy against labels.
+
+**Make your own.**
+
+1. **Write the sentence.** "Today, [problem]. We [idea]. Now, [payoff with a number]."
+2. **Choose what leads,** from the table above.
+3. **Follow one real example** through every panel. Pick a typical case, not the best of fifty.
+4. **Sketch on paper first,** in week one, with three or four groups and one reading direction.
+5. **Replace boxes with pictures.** A box that says "Encoder" shows nothing.
+6. **Put one number on it,** with the baseline beside it.
+7. **Colour only what is new.** Everything else is grey.
+8. **Build it at final width,** as a vector PDF, with text of at least 6–7 pt. Put it on page 1.
+9. **Open the caption with the claim,** and use the abstract's words on the figure.
+10. **Test it for ten seconds** on someone outside the project. Redraw what they miss.
 
 **Common failures.**
 
-- **It is the system diagram.** Twenty boxes and thirty arrows show effort, not an idea.
-- **It has boxes where pictures should be.** A box labelled "Encoder" or "Modeling" tells the reader nothing.
-- **It uses clip-art** in place of real inputs and outputs.
-- **It shows the method but not why it matters,** or the result but not what produced it.
-- **It needs the caption to decode it,** or its text is too small to read at paper size.
-- **Its words differ from the abstract's.** Use the same names for the same things.
-- **It has a spelling mistake.** Spell-checkers do not read images, so proofread every label.
+- It is the system diagram. Twenty boxes and thirty arrows show effort, not an idea.
+- It uses clip-art in place of real inputs and outputs.
+- It shows the method but not why it matters, or the result but not what produced it.
+- It needs the caption to decode it, or its text is too small at paper size.
+- Its words differ from the abstract's.
+- A label is misspelt. Spell-checkers do not read images.
 
-The handbook shows fifteen published first figures read this way: https://sustainability-lab.github.io/handbook/writing-papers.html#hero-figures
+The handbook shows 24 published first figures and what to borrow from each: https://sustainability-lab.github.io/handbook/hero-figures.html
 
 ## 12. Figures
 
