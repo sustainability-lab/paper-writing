@@ -13,7 +13,7 @@ The human-readable guide, with figures and worked examples, is in the lab handbo
 | [`skills/paper-writing/reference.md`](skills/paper-writing/reference.md) | Every rule, section by section, with examples |
 | [`skills/paper-writing/checklist.md`](skills/paper-writing/checklist.md) | Pre-submission checklist |
 
-The rules cover the skeleton (one abstract line = one intro paragraph = one section), the [RM101](https://github.com/nipunbatra/CS-Research-Methods-Bootcamp/blob/master/RM101.pdf) abstract, introductions with lead and bridge sentences, separate background and related work, intuition-first methods with toy examples, question-driven evaluation, semantic colour in figures, takeaway-first tables, LaTeX hygiene, active voice and short sentences.
+The rules cover the skeleton (one abstract line = one intro paragraph = one section), the [RM101](https://github.com/nipunbatra/CS-Research-Methods-Bootcamp/blob/master/RM101.pdf) abstract, introductions with lead and bridge sentences, separate background and related work, intuition-first methods with toy examples, question-driven evaluation, hero figures that show the problem, the idea and the payoff in ten seconds, semantic colour in figures, takeaway-first tables, LaTeX hygiene, active voice and short sentences.
 
 ## Install
 

@@ -124,7 +124,58 @@ Example (after):
 - One term per concept; acronyms expanded once.
 - One spelling variety (lab default: British, unless co-authors prefer otherwise).
 
-## 11. Figures
+## 11. Hero figure (Figure 1)
+
+Figure 1 is the picture on page 1 or 2 that a reviewer sees before reading the introduction. Many reviewers decide how carefully to read from the title, the abstract and this figure.
+
+A reader should answer three questions in about ten seconds:
+
+1. **Problem.** What is hard or missing today?
+2. **Idea.** What is the one thing that changes the situation?
+3. **Payoff.** What becomes possible, or what improves, and by how much?
+
+It is a visual abstract, and usually *not* the architecture diagram. That diagram answers "how is it built?", which is a question for Figure 2.
+
+**What to lead with.** Ask which sentence of the abstract a reviewer should repeat to the other reviewers, and draw that sentence.
+
+| If the main claim is | Lead with |
+|---|---|
+| "We can now do X, which nobody could." | **Payoff**: the outputs themselves, on real inputs |
+| "We do X better, faster or cheaper." | **Payoff**: the evidence, with the numbers on the picture |
+| "One simple idea solves X." | **Idea**: one real example going in, the idea, the result coming out |
+| "One model handles many settings." | **Idea**: many real inputs, one model, many real outputs |
+| "Everyone has missed problem X." | **Problem**: a failure, measured or shown |
+| "Here is a dataset or a benchmark." | **Scope**: real samples, counts, and one item from start to score |
+| "We make three contributions of equal weight." | **Scope**: one panel per contribution |
+
+**Lab default for an applied paper.** A strip of three panels: problem, idea, payoff, in that order, on *one real example*, with *one number*. An applied reviewer first has to believe the problem is real, so the problem gets its own panel. Give the most space to the strongest panel: a capability paper widens the payoff; a paper with one clever idea widens the idea.
+
+**How to make one.**
+
+1. **Write the sentence first.** "Today, [problem]. We [idea]. Now, [payoff with a number]." If you cannot complete it, the paper is not ready for a figure.
+2. **Choose what leads,** from the table above. Give that panel the most space.
+3. **Pick one real example and follow it through every panel** (one home, one thermal frame, one city). Real data beats icons. Every image must come from the run it claims to show.
+4. **Sketch it on paper in week one,** with three or four groups and one reading direction. Show the sketch to a labmate before opening any drawing tool.
+5. **Add one number,** on the figure itself, with the baseline beside it.
+6. **Colour only what is new.** Grey for existing work, one accent colour for the contribution, and the same colour code as the rest of the paper.
+7. **Build it at its final width.** Draw in Figma, draw.io, Inkscape or TikZ, export a vector PDF, and check that the smallest text is at least 6–7 pt in the compiled paper. Plots inside it follow LaTeXify.
+8. **Place it at the top of page 1 or 2.** Use `figure*` for a full-width figure. The ACM template also has `teaserfigure`, which sets it under the title.
+9. **Open the caption with the message,** as for every figure.
+10. **Run the ten-second test.** Show the figure, without its caption, to someone outside the project for ten seconds. Ask for the problem, the idea and the payoff. Redraw whatever they miss.
+
+**Common failures.**
+
+- **It is the system diagram.** Twenty boxes and thirty arrows show effort, not an idea.
+- **It has boxes where pictures should be.** A box labelled "Encoder" or "Modeling" tells the reader nothing.
+- **It uses clip-art** in place of real inputs and outputs.
+- **It shows the method but not why it matters,** or the result but not what produced it.
+- **It needs the caption to decode it,** or its text is too small to read at paper size.
+- **Its words differ from the abstract's.** Use the same names for the same things.
+- **It has a spelling mistake.** Spell-checkers do not read images, so proofread every label.
+
+The handbook shows fifteen published first figures read this way: https://sustainability-lab.github.io/handbook/writing-papers.html#hero-figures
+
+## 12. Figures
 
 - One message per figure, stated in the first (bold) sentence of the caption; captions self-contained.
 - Simple over complete; step-by-step panels, one idea per panel; detail to the appendix.
@@ -135,7 +186,7 @@ Example (after):
 - One drawing style (TikZ or matplotlib with LaTeXify); plotted numbers read from results files, source noted in a comment.
 - A headline result figure (trade-off plot).
 
-## 12. Tables
+## 13. Tables
 
 - Follow Püschel's guide: https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf (booktabs, no vertical rules).
 - Caption: takeaway first, then what the columns mean.
@@ -145,7 +196,7 @@ Example (after):
 - Counts for small n (7/10).
 - State the bold/underline rule; shade the "ours" row.
 
-## 13. LaTeX hygiene
+## 14. LaTeX hygiene
 
 - `\cref` everywhere; never hand-type numbers, including the supplement: `\usepackage{xr-hyper}`, `\externaldocument[S-]{supp}`, `\cref{S-tab:x}`. On Overleaf add a `latexmkrc` that builds the supplement.
 - Macros for method name, metric names, recurring symbols.
@@ -153,7 +204,7 @@ Example (after):
 - Label scheme: `sec:`, `fig:`, `tab:`, `eq:`.
 - One sentence per source line.
 
-## 14. Review protocol
+## 15. Review protocol
 
 1. Don't overwrite the author's text: inline comments plus a suggested rewrite after the original, behind the notes switch.
 2. Comment on the why, not just the what.
@@ -162,7 +213,7 @@ Example (after):
 5. End with a short review guide: changes by section, runs needed, facts to confirm.
 6. Compile in an isolated copy; report errors, undefined references and overfull boxes; look at rendered figures.
 
-## 15. Timeline (suggested, adjust per venue)
+## 16. Timeline (suggested, adjust per venue)
 
 - Week −8: abstract and title; figure and table sketches.
 - Weeks −8 to −3: experiments; full first draft from week −6.
