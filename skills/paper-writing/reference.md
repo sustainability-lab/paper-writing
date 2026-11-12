@@ -124,7 +124,62 @@ Example (after):
 - One term per concept; acronyms expanded once.
 - One spelling variety (lab default: British, unless co-authors prefer otherwise).
 
-## 11. Figures
+## 11. Hero figure (Figure 1)
+
+Figure 1 is the picture on page 1 that a reviewer sees before reading the introduction. In about ten seconds it should answer three questions:
+
+1. **Problem.** What is hard or missing today?
+2. **Idea.** What is the one thing that changes that?
+3. **Payoff.** What becomes possible, and by how much?
+
+It is a visual abstract, not the architecture diagram. The first draft is nearly always the pipeline; redraw it.
+
+**Choose what leads.** Ask which sentence of the abstract a reviewer should repeat to the other reviewers. Draw that sentence.
+
+| The main claim | Lead with | Layout |
+|---|---|---|
+| "Everyone has missed problem X." | **Problem** | A plot of the failure |
+| "A small change to a known method matters." | **Idea** | Old and new, side by side |
+| "One simple idea solves X." | **Idea** | One example in, the idea, the result out |
+| "One method handles many settings." | **Idea** | Many inputs, one model, many outputs |
+| "We do X better, faster or cheaper." | **Payoff** | Methods side by side, numbers on the picture |
+| "We can now do X, which nobody could." | **Payoff** | A gallery of real outputs |
+| "Here is a dataset or a benchmark." | **Scope** | Real samples and counts, or one item from input to score |
+| "We make several contributions." | **Scope** | One panel per contribution |
+
+**Lab default for an applied paper.** Three panels, problem then idea then payoff, on *one real example*, with *one number*. Give the most space to the strongest panel. Published hero figures often carry no number, because their outputs can be judged by eye. A forecast or a temperature cannot, so our figures need the number.
+
+**Kestrel.** The pipeline draft is five boxes: phone audio, spectrogram, encoder, classifier, species. Every box is true, and none says what is hard, what is new or what is gained. The sketch we would draw instead:
+
+- *Problem.* A classifier trained on clean recordings drops from 91% to 54% on phone audio. Draw one call as two spectrograms, studio and phone.
+- *Idea.* The phone's microphone, not the bird, causes the drop. Undo the microphone first. Draw the phone spectrogram, corrected.
+- *Payoff.* 83% on phone audio, against 61% for the best baseline. Draw the plot of accuracy against labels.
+
+**Make your own.**
+
+1. **Write the sentence.** "Today, [problem]. We [idea]. Now, [payoff with a number]."
+2. **Choose what leads,** from the table above.
+3. **Follow one real example** through every panel. Pick a typical case, not the best of fifty.
+4. **Sketch on paper first,** in week one, with three or four groups and one reading direction.
+5. **Replace boxes with pictures.** A box that says "Encoder" shows nothing.
+6. **Put one number on it,** with the baseline beside it.
+7. **Colour only what is new.** Everything else is grey.
+8. **Build it at final width,** as a vector PDF, with text of at least 6–7 pt. Put it on page 1.
+9. **Open the caption with the claim,** and use the abstract's words on the figure.
+10. **Test it for ten seconds** on someone outside the project. Redraw what they miss.
+
+**Common failures.**
+
+- It is the system diagram. Twenty boxes and thirty arrows show effort, not an idea.
+- It uses clip-art in place of real inputs and outputs.
+- It shows the method but not why it matters, or the result but not what produced it.
+- It needs the caption to decode it, or its text is too small at paper size.
+- Its words differ from the abstract's.
+- A label is misspelt. Spell-checkers do not read images.
+
+The handbook shows 24 published first figures and what to borrow from each: https://sustainability-lab.github.io/handbook/hero-figures.html
+
+## 12. Figures
 
 - One message per figure, stated in the first (bold) sentence of the caption; captions self-contained.
 - Simple over complete; step-by-step panels, one idea per panel; detail to the appendix.
@@ -135,7 +190,7 @@ Example (after):
 - One drawing style (TikZ or matplotlib with LaTeXify); plotted numbers read from results files, source noted in a comment.
 - A headline result figure (trade-off plot).
 
-## 12. Tables
+## 13. Tables
 
 - Follow Püschel's guide: https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf (booktabs, no vertical rules).
 - Caption: takeaway first, then what the columns mean.
@@ -145,7 +200,7 @@ Example (after):
 - Counts for small n (7/10).
 - State the bold/underline rule; shade the "ours" row.
 
-## 13. LaTeX hygiene
+## 14. LaTeX hygiene
 
 - `\cref` everywhere; never hand-type numbers, including the supplement: `\usepackage{xr-hyper}`, `\externaldocument[S-]{supp}`, `\cref{S-tab:x}`. On Overleaf add a `latexmkrc` that builds the supplement.
 - Macros for method name, metric names, recurring symbols.
@@ -153,7 +208,7 @@ Example (after):
 - Label scheme: `sec:`, `fig:`, `tab:`, `eq:`.
 - One sentence per source line.
 
-## 14. Review protocol
+## 15. Review protocol
 
 1. Don't overwrite the author's text: inline comments plus a suggested rewrite after the original, behind the notes switch.
 2. Comment on the why, not just the what.
@@ -162,7 +217,7 @@ Example (after):
 5. End with a short review guide: changes by section, runs needed, facts to confirm.
 6. Compile in an isolated copy; report errors, undefined references and overfull boxes; look at rendered figures.
 
-## 15. Timeline (suggested, adjust per venue)
+## 16. Timeline (suggested, adjust per venue)
 
 - Week −8: abstract and title; figure and table sketches.
 - Weeks −8 to −3: experiments; full first draft from week −6.
